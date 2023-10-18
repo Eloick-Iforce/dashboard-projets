@@ -1,31 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/dist/output.css">
     <title>Tableau de Bord</title>
 </head>
 
 <body>
-    <h1>Tableau de Bord</h1>
+    <div class="bg-white text-black dark:bg-gray-900 dark:text-white p-5 min-h-screen">
 
-    <h2>Liste des Projets</h2>
-    <div class="card-container">
-        <?php
-        include 'variables.php';
-        include 'projets.php';
+        <div class="flex justify-between">
+            <h1 class="font-bold text-5xl">Tableau de Bord</h1>
+            <button id="themeToggle" class="p-2 rounded bg-gray-800 text-white dark:text-black dark:bg-gray-200" onclick="toggleTheme()">Changer de thème</button>
 
-        echo '<h2>Projets Locaux</h2>';
-        afficherProjets($projetsDirectoryLocal);
+        </div>
 
-        echo '<h2>Projets WSL</h2>';
-        afficherProjets($projetsDirectoryWSL);
-        ?>
+        <div class="">
+            <?php
+            include 'variables.php';
+            include 'projets.php';
 
+            echo '<h2 class="text-2xl">Projets Locaux</h2>';
+            afficherProjets($projetsDirectoryLocal);
+
+            echo '<h2 class="text-2xl">Projets WSL</h2>';
+            afficherProjets($projetsDirectoryWSL);
+            ?>
+
+        </div>
+        <script src="main.js"></script>
+        <script>
+            function toggleTheme() {
+                console.log('toggle theme');
+                const body = document.body;
+                if (body.classList.contains('dark')) {
+                    body.classList.remove('dark');
+                } else {
+                    body.classList.add('dark');
+                }
+            }
+        </script>
     </div>
-    <script src="main.js"></script>
 </body>
 
 </html>

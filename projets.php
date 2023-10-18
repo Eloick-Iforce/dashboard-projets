@@ -40,10 +40,12 @@ class Projet
 
     public function afficher()
     {
-        echo '<div class="card" id="' . $this->id . '" onclick="openWithVSCode(this)" data-path="' . $this->chemin . '">';
-        echo '<h3>' . $this->nom . '</h3>';
-        echo '<p>Dernière modification : ' . date("F d Y H:i:s.", $this->derniereModification) . '</p>';
-        echo '<img class="logo" src="images/' . $this->technologie . '.png" alt="' . $this->technologie . ' logo">';
+        echo '<div class="border dark:border-gray-800 dark:bg-gray-800 p-2 m-2 rounded shadow-md cursor-pointer flex justify-between items-center dark:hover:bg-gray-700 border-gray-200 bg-gray-200 hover:bg-gray-300" id="' . $this->id . '" onclick="openWithVSCode(this)" data-path="' . $this->chemin . '">';
+        echo '<div>';
+        echo '<h3 class="dark:text-white text-black">' . $this->nom . '</h3>';
+        echo '<p class="dark:text-white text-black">Dernière modification : ' . date("F d Y H:i:s.", $this->derniereModification) . '</p>';
+        echo '</div>';
+        echo '<img class="w-12 h-12" src="images/' . $this->technologie . '.png" alt="' . $this->technologie . ' logo">';
         echo '</div>';
     }
 }
