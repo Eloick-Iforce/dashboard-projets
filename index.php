@@ -13,7 +13,10 @@
 
         <div class="flex justify-between">
             <h1 class="font-bold text-5xl">Tableau de Bord</h1>
-            <button id="themeToggle" class="p-2 rounded bg-gray-800 text-white dark:text-black dark:bg-gray-200" onclick="toggleTheme()">Changer de thème</button>
+            <div>
+                <a href="http://localhost/phpmyadmin" target="_blank" class="p-2 bg-blue-500 rounded hover:bg-blue-700 text-white">Open phpMyAdmin</a>
+                <button id="themeToggle" class="p-2 rounded bg-gray-800 text-white dark:text-black dark:bg-gray-200" onclick="toggleTheme()">Changer de thème</button>
+            </div>
 
         </div>
 
