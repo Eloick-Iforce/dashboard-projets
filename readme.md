@@ -1,5 +1,7 @@
 # Dashboard-Projects-Lists
 
+![image](https://github.com/Eloick-Iforce/dashboard-projets/assets/62253344/e2b6d3b0-481c-4ec7-8671-c9fa76c14d87)
+
 ## Description
 
 This project is a web application that allows opening projects in Visual Studio Code from a web browser. It scans a specified directory for projects and displays a card for each project. Clicking on a card opens the corresponding project in Visual Studio Code.
